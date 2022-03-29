@@ -1,0 +1,10 @@
+<div>
+  <input name="name" id="ipt-name" type="text" [(ngModel)]="name" />
+    <button (click)="addUser()" id="btn-user">Add user</button>
+</div>
+<br/>
+<div>
+    <ul>
+      <li *ngFor="let user of users$ | async">{{user.name}}</li>
+    </ul>
+</div>
